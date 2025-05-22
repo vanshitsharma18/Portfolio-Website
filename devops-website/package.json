@@ -1,0 +1,22 @@
+{
+  "name": "devops-website",
+  "version": "1.0.0",
+  "description": "A website project for DevOps engineers.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process goes here'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "DevOps",
+    "website",
+    "project"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

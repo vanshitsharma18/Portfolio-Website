@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="navbar container">
+            <div class="logo">V3NOM-XT</div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active" >Home</a></li>
+                    <li><a href="#services" >Services</a></li>
+                    <li><a href="#about" >About me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact" >Contact me</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-orange">Hire Me</a>
+        </div>
+    </header>
+    <section id="home" class="hero container">
+        <div class="hero-content">
+            <h3>Hi, I am</h3>
+            <h1>Vanshit Sharma</h1>
+            <h2 class="orange">DevOps Engineer</h2>
+            <div class="social-icons">
+                <a href="https://github.com/vanshitsharma18" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vanshit-sharma/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/MysticVenomXT" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-orange">Hire Me</a>
+                <a href="#" class="btn btn-dark">Download CV</a>
+            </div>
+            <div class="hero-stats">
+                <div><span>1+</span> Years Experience</div>
+                <div><span>10+</span> Projects</div>
+                <div><span>10+</span> Happy Clients</div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/profile.png" alt="Profile Photo">
+        </div>
+    </section>
+    <section id="services" class="container">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud Architecture</h3>
+                <p>Design and implement scalable cloud solutions on AWS, Azure, or GCP.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs"></i>
+                <h3>CI/CD Automation</h3>
+                <p>Automate build, test, and deployment pipelines for faster delivery.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Infrastructure as Code</h3>
+                <p>Provision and manage infrastructure using Terraform and Ansible.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-database"></i>
+                <h3>Monitoring & Logging</h3>
+                <p>Implement monitoring and logging with Prometheus, Grafana, ELK.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="container about-section">
+        <div class="about-image">
+            <img src="assets/profile1.png" alt="Profile Photo">
+        </div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                Enthusiastic DevOps beginner with a strong foundation in cloud platforms, CI/CD, and automation. Passionate about streamlining development workflows and learning modern infrastructure tools.
+            </p>
+            <a href="#" class="btn btn-orange">Download CV</a>
+        </div>
+        <div class="about-skills">
+            <div class="skill-box">
+                <img src="assets/amazonwebservices.svg" alt="AWS" class="skill-logo">
+                <span>AWS</span>
+            </div>
+            <div class="skill-box">
+                <img src="assets/docker.svg" alt="Docker" class="skill-logo">
+                <span>Docker</span>
+            </div>
+            <div class="skill-box">
+                <img src="assets/jenkins.svg" alt="Jenkins" class="skill-logo">
+                <span>Jenkins</span>
+            </div>
+            <div class="skill-box">
+                <img src="assets/kubernetes.svg" alt="Kubernetes" class="skill-logo">
+                <span>Kubernetes</span>
+            </div>
+            <div class="skill-box">
+                <img src="assets/terraform.svg" alt="Terraform" class="skill-logo">
+                <span>Terraform</span>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-filters">
+            <button class="active">All</button>
+            <button>Cloud</button>
+            <button>CI/CD</button>
+            <button>IaC</button>
+            <button>Monitoring</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="assets/project1.png" alt="Project 1">
+                <div class="portfolio-info">
+                    <h3>Serverless Notification System</h3>
+                    <span>AWS</span>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="assets/project2.png" alt="Project 2">
+                <div class="portfolio-info">
+                    <h3>Chatbot</h3>
+                    <span>Python , Gemini API</span>
+                </div>
+            </div>
+            <!-- Add more portfolio cards as needed -->
+        </div>
+    </section>
+    <section id="contact" class="container">
+        <h2>Contact me</h2>
+        <p>Cultivating Connections: Reach Out And Connect With Me</p>
+        <form class="contact-form" action="https://formspree.io/f/mgvkbzvz" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Phone Number">
+            <input type="text" name="service" placeholder="Service Of Interest">
+            <textarea name="message" placeholder="Project Details..." required></textarea>
+            <button type="submit" class="btn btn-orange">Send</button>
+        </form>
+    </section>
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">V3NOM-XT</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social">
+                <a href="https://github.com/vanshitsharma18" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vanshit-sharma/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/MysticVenomXT" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="footer-contact">
+                <p>vanshitsharma2006@email.com</p>
+                <p>+918595434717</p>
+            </div>
+            <p>&copy; 2025 Vanshit Sharma. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+document.querySelectorAll('section').forEach(section => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  observer.observe(section);
+});
+</script>
+</body>
+</html>
