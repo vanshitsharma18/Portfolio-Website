@@ -246,6 +246,7 @@ h1, h2, h3 {
     line-height: 1.2;
     background: var(--gradient-1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
