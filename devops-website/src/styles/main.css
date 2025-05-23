@@ -237,6 +237,16 @@ section.visible {
     transform: translateY(0);
 }
 
+.fade-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 h2 {
     color: #fff;
     font-size: 2em;

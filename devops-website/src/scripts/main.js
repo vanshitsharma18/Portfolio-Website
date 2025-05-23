@@ -37,7 +37,7 @@ scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Optional: Smooth scroll for anchor links (if not using CSS scroll-behavior)
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const target = document.querySelector(this.getAttribute('href'));
@@ -47,3 +47,57 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Fade-in animation for sections on scroll
+document.querySelectorAll('section').forEach(section => {
+    section.classList.add('fade-section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    observer.observe(section);
+});
+
+// Portfolio filter functionality (if you add filter buttons)
+const filterButtons = document.querySelectorAll('.portfolio-filters button');
+const portfolioCards = document.querySelectorAll('.portfolio-card');
+if (filterButtons.length) {
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.textContent.trim();
+            portfolioCards.forEach(card => {
+                if (filter === 'All' || (card.querySelector('span') && card.querySelector('span').textContent.includes(filter))) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// Contact form basic validation feedback
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        const requiredFields = contactForm.querySelectorAll('[required]');
+        let valid = true;
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.style.borderColor = 'red';
+                valid = false;
+            } else {
+                field.style.borderColor = '';
+            }
+        });
+        if (!valid) {
+            e.preventDefault();
+        }
+    });
+}
