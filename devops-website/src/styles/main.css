@@ -343,11 +343,12 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 120px;
+    min-height: 120px;
     box-shadow: 0 1px 6px #0002;
     transition: box-shadow 0.3s, transform 0.3s;
-    min-width: 110px;
-    min-height: 100px;
     cursor: pointer;
+    flex: 0 0 auto;
 }
 .skill-box:hover {
     box-shadow: 0 0 16px 2px var(--accent);
@@ -682,4 +683,25 @@ footer {
     .footer-social {
         margin: 12px 0;
     }
+}
+
+/* Skills section horizontal scroll and box styling */
+.skills-grid {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-card);
+}
+.skills-grid::-webkit-scrollbar {
+    height: 8px;
+}
+.skills-grid::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 8px;
+}
+.skills-grid::-webkit-scrollbar-track {
+    background: var(--bg-card);
+    border-radius: 8px;
 }
