@@ -99,6 +99,7 @@ Always eager to learn new tools, enhance system reliability, and contribute to a
             <div class="skill-box">
                 <img src="assets/amazonwebservices.svg" alt="AWS" class="skill-logo">
                 <span>AWS</span>
+                <div class="skill-progress aws"></div>
             </div>
             <div class="skill-box">
                 <img src="assets/terraform.svg" alt="Terraform" class="skill-logo">
@@ -197,6 +198,19 @@ Always eager to learn new tools, enhance system reliability, and contribute to a
             <p>&copy; 2025 Vanshit Sharma. All rights reserved.</p>
         </div>
     </footer>
+    <div class="portfolio-modal" id="portfolioModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <img src="" alt="Project" id="modalImage">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <div class="modal-tags" id="modalTags"></div>
+    <div class="modal-links">
+      <a href="#" target="_blank" id="modalLiveLink" class="btn btn-orange">View Live</a>
+      <a href="#" target="_blank" id="modalGithubLink" class="btn btn-dark">GitHub</a>
+    </div>
+  </div>
+</div>
     <script>
 document.querySelectorAll('section').forEach(section => {
   const observer = new IntersectionObserver(entries => {
