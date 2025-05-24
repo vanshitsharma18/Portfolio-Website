@@ -227,7 +227,7 @@ const projectDetails = [
     title: "Chatbot",
     description: "An AI-powered chatbot built with Python and Gemini API. The chatbot can answer questions, provide recommendations, and engage in natural conversation.",
     tags: ["Python", "Gemini API", "NLP", "Machine Learning"],
-    liveLink: "#",
+    liveLink: "https://github.com/vanshitsharma18/chatbot",
     githubLink: "https://github.com/vanshitsharma18/project2"
   }
 ];
