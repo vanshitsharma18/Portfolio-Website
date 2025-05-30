@@ -144,23 +144,17 @@ contactForm.addEventListener('submit', function(e) {
 
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('nav ul');
+const nav = document.querySelector('nav');
 
 menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+    nav.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
 });
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('nav') && !e.target.closest('.menu-toggle')) {
-        navMenu.classList.remove('show');
-    }
-});
-
-// Close menu when clicking a link
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('show');
+        nav.classList.remove('active');
+        document.body.classList.remove('no-scroll');
     });
 });
 
