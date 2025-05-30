@@ -72,6 +72,8 @@ header.main-header {
     font-weight: 800;
     background: var(--gradient-1);
     -webkit-background-clip: text;
+    background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
 }
