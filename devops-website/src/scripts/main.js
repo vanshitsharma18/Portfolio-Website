@@ -260,3 +260,16 @@ window.addEventListener('click', (e) => {
     document.body.style.overflow = 'auto';
   }
 });
+
+// Animate skill boxes when they come into view
+const skillsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.skill-box').forEach(box => {
+  skillsObserver.observe(box);
+});
